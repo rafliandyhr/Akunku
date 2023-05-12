@@ -1,56 +1,675 @@
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",ML
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679361903/ei/D7MYZJevOI-d3LUPyLCDkAs/ip/103.253.24.212/id/UvjlaMM-Yeg.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/rr3---sn-npoldn76.googlevideo.com/vprv/1/playlist_type/LIVE/initcwndbps/196250/mh/iK/mip/2001:470:1:be9:0:14:43:b7e6/mm/44/mn/sn-npoldn76/ms/lva/mv/m/mvi/3/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679340056/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,vprv,playlist_type/sig/AOq0QJ8wRAIgD3cKbPldeB6432ap7RibyH848igksOV8Xr0WfJS6dE8CIDUPLDYUCZmCEUiMI0pWwncb23N7rdxWbXDr5_MY6ch8/lsparams/hls_chunk_host,initcwndbps,mh,mip,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRgIhAIxLLCh_j-mQ2i08VN9tOjoKP_XbBUsyrjcwGO23oBsnAiEA6kQ0gas5lahwZAdyOZGG5ZHaidxDVClIf5Q4oqBjdR4%3D/playlist/index.m3u8
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: folder
+interface-name: masterwifinetworksolution
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+  nameserver:
+    - 114.114.114.114
+    - 119.29.29.29
+    - 1.1.1.1
+    - 1.0.0.1 
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - https://1.1.1.1/dns-query
+    - tls://8.8.8.8:853
+    - tls://dns.rubyfish.cn:853 
+    - https://1.1.1.1/dns-query 
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+proxy-groups:
+- name: FINAL
+  type: select
+  proxies:
+  - Semua_PingMantul
+  - MasterTrojan
+  - MasterVmess
+  - VidioVmess
+  - MasterShadowsocks
+  - MasterSnell
+  - PingMantul_Trojan
+  - PingMantul_Vmess
+  - PingMantul_Shadowsocks
+  - PingMantul_Snell
+  - Gabung_Trojan
+  - Gabung_Vmess
+  - Vidio_Vmess
+  - Gabung_Shadowsocks
+  - Gabung_Snell
+  - SOSMED
+  - STREAMING
+  - GAME
+  - BOKEP
+  - VIDIO
+  - ZEROTIER
+  - DIRECT
+ 
+- name: Semua_PingMantul
+  type: url-test
+  tolerance: 100
+  use:
+  - TrojanMaster
+  - VmessMaster
+  - ShadowsocksMaster
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",PUBG
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679361018/ei/mq8YZJgMlq6O4w_GlYX4Bw/ip/103.253.24.212/id/Mp72eWwIbPY.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/rr2---sn-npoe7nlz.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/138750/mh/zp/mip/2001:470:1:be9:0:14:43:b7e6/mm/44/mn/sn-npoe7nlz/ms/lva/mv/m/mvi/2/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679339095/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRAIgFrGXUKAUsoUUeiNpk4jL-Fp7ovVr04Az0xT8A2_d-NoCIEhdCcSMOpzkHNWYw5Fioj06XCbVSwfq0YrC3RGbEF0a/lsparams/hls_chunk_host,initcwndbps,mh,mip,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRgIhANQV74Burc3d6EZJSvBKqS1jpg5wV-U8yjhkYebSz6dHAiEAxYPR6ZXMtN10agnQfrC6YFLzM5jvCW-k7ACanw7wZTo%3D/playlist/index.m3u8
+- name: MasterTrojan
+  type: select
+  use:
+  - TrojanMaster
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Super Senya RU
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679358139/ei/W6QYZLfuB72Q3LUPvr-d6AU/ip/103.253.24.212/id/Rjz5Z5kb5lo.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/rr3---sn-npoldn7e.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/172500/mh/h-/mip/2001:470:1:be9:0:14:43:b7e6/mm/44/mn/sn-npoldn7e/ms/lva/mv/m/mvi/3/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679336213/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRgIhAIEy--Rn-54lqywsGb9Sbw_EAyxtrh47MBZD_Oc4vT4uAiEAuY1fSVVjIxxSANqzx0sJUPKp630dLJA88dMKsN1jodY%3D/lsparams/hls_chunk_host,initcwndbps,mh,mip,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgdbk2nOGXrTT47v0NjGEXcun_BSpnk3zvIPj8AcDGze0CIFy3GNvoC6ghd8T6qVt42RHRx3ommfwXnjkygBN2QV2E/playlist/index.m3u8
+- name: MasterVmess
+  type: select
+  use:
+  - VmessMaster
+  
+- name: VidioVmess
+  type: select
+  use:
+  - VmessVidio
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Garfield & Friend
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679357461/ei/taEYZMjwFdWA4-EPl_qLqAc/ip/103.253.24.212/id/hnQ4kJgo-Bw.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/rr2---sn-npoe7ns7.googlevideo.com/playlist_duration/30/manifest_duration/30/gcr/id/vprv/1/playlist_type/DVR/initcwndbps/126250/mh/8F/mip/2001:470:1:be9:0:14:43:b7e6/mm/44/mn/sn-npoe7ns7/ms/lva/mv/m/mvi/2/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679335500/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,gcr,vprv,playlist_type/sig/AOq0QJ8wRQIhAJ1C6mwLS6QpdDxbBOzL7PAW7c0n5ZOSloXKIE1M3ZPCAiBbTTVc3WiLfToQF1_gXx7Zed30IzZPsu2SS7NNcFRgmg%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mip,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgHkT5YAw3lNNUSfRfVqK70ZcrmfQPeyoLhymIID3vYqwCIGjPjmRCQWPzRhktq16_hOm0m17ceSi9sIQqCqbZPmme/playlist/index.m3u8
+- name: MasterShadowsocks
+  type: select
+  use:
+  - ShadowsocksMaster
+  
+- name: MasterSnell
+  type: select
+  use:
+  - SnellMaster
+ 
+- name: PingMantul_Trojan
+  type: url-test
+  tolerance: 100
+  use:
+  - TrojanMaster
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Woody Wood Packer
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679342819/ei/g2gYZLb7CPG63LUPtvOH2AI/ip/103.253.24.212/id/LXGd5RALuYY.1/itag/93/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D134/hls_chunk_host/rr4---sn-npoe7nss.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/151250/mh/m9/mip/2001:470:1:be9:0:14:43:b7e6/mm/44/mn/sn-npoe7nss/ms/lva/mv/m/mvi/4/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679320861/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRQIhAMWPg2S0jws6jC0g10LXqKeDKet8HsBbUwBDh8AjFz4wAiAyMgBgkWbzL0bbios85jKEJf-PgyOAK7O-fCdzPRnMJQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mip,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRgIhAL5CeQ_Xuq_c1elIlJxkPEqSumjSmr9XaRnQ9rxf2aBuAiEA_Lf25TrgL7rX2d-BfBN-V3Y_Owy1950I4Yj7kCtLqQA%3D/playlist/index.m3u8
+- name: PingMantul_Vmess
+  type: url-test
+  tolerance: 100
+  use:
+  - VmessMaster
+ 
+- name: PingMantul_Shadowsocks
+  type: url-test
+  tolerance: 100
+  use:
+  - ShadowsocksMaster
+  
+- name: PingMantul_Snell
+  type: url-test
+  tolerance: 100
+  use:
+  - SnellMaster
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Disney XD
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679342454/ei/FmcYZPiOCPeaz7sPyMeKgAk/ip/103.253.24.212/id/3Jd1FAxp400.2/itag/93/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D134/hls_chunk_host/rr3---sn-npoldn7y.googlevideo.com/playlist_duration/30/manifest_duration/30/gcr/id/vprv/1/playlist_type/DVR/initcwndbps/540000/mh/TZ/mip/2001:470:1:be9:0:14:43:b7e6/mm/44/mn/sn-npoldn7y/ms/lva/mv/m/mvi/3/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679320626/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,gcr,vprv,playlist_type/sig/AOq0QJ8wRQIgf06aN7JQFM0QhG4cCs79EmI9doVoNgwCEfIm0EDVhpICIQDKEQSc3wCVZFS6rNv6Y57JrVcZxxLL26f-efz1GBLaDg%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mip,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRgIhALkhPZ0DE_LAOnnubY0zgcKpHzu52a_QSyPwyYHCryn5AiEAwfjimZOajegQ_8NlJJ83aHkKH02o6upuXZ--qI7GoQc%3D/playlist/index.m3u8
+- name: Gabung_Trojan
+  type: load-balance
+  strategy: consistent-hashing
+  disable-udp: false
+  use:
+  - TrojanMaster
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Sponges Bob Marathon
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679337488/ei/sFMYZNKOB_DrjuMPp9CV2AY/ip/2001:470:1:be9:0:14:43:b7e6/id/eY8557ZrwY8.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/rr4---sn-i3belnl7.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/213750/mh/5e/mm/44/mn/sn-i3belnl7/ms/lva/mv/m/mvi/4/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679315815/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRgIhALxL13Zpmwt7wK1UM9FEYuBTZPeN5fWVafLctfV2FYkVAiEAiT_Kw2aMfOvHY3k5jMpJi_WMPbG78V-Go10gC6wS7Z4%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgXIdAz0rhbV5UV82Le5pqBzA6caDpZr0dwLBVnxjBP_UCIAWLsdWIpSgkZIXb7_-_XuuSlFg8I9Tg83s83iJQr9-r/playlist/index.m3u8
+- name: Gabung_Vmess
+  type: load-balance
+  strategy: consistent-hashing
+  disable-udp: false
+  use:
+  - VmessMaster
+  
+- name: Vidio_Vmess
+  type: fallback
+  strategy: consistent-hashing
+  disable-udp: false
+  use:
+  - VmessVidio
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",My Little Poni
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679336899/ei/Y1EYZJnDCOCB4-EPutif2AM/ip/2001:470:1:be9:0:14:43:b7e6/id/i3UmCmtBLKk.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/rr3---sn-npoeenez.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/528750/mh/sD/mm/44/mn/sn-npoeenez/ms/lva/mv/m/mvi/3/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679315106/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRQIgGVKO_a-lNNJYktzLBcO55JkU63Y5eCZMs8lwV_oFqhMCIQDS3JQrokP1xQIabsQNfUWMKcGoZz_G9_w61e9QPypd1A%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgMPuRBumUmZPV1jH-0VYTOTsHYvRc0i0uSI86RSgEZIYCIDgE84ubKNlQtlRcCInpFGtKkpVGGk5jK6VZ5JVa-2u6/playlist/index.m3u8
+- name: Gabung_Shadowsocks
+  type: load-balance
+  strategy: consistent-hashing
+  disable-udp: false
+  use:
+  - ShadowsocksMaster
+  
+- name: Gabung_Snell
+  type: load-balance
+  strategy: consistent-hashing
+  disable-udp: false
+  use:
+  - SnellMaster
+  
+- name: SOSMED
+  type: fallback
+  use:
+  - ShadowsocksMaster
+  
+- name: STREAMING
+  type: fallback
+  use:
+  - ShadowsocksMaster
+  
+- name: VIDIO
+  type: fallback
+  use:
+  - ShadowsocksMaster
+  
+- name: GAME
+  type: load-balance
+  use:
+  - Game
+  
+- name: BOKEP
+  type: fallback
+  use:
+  - ShadowsocksMaster
+  
+- name: ZEROTIER
+  type: load-balance
+  use:
+  - ShadowsocksMaster
+  - VmessMaster
+  - TrojanMaster
+  
+  
+proxies-direct:
+- name: "SOSMED"
+  type: select
+  proxies:
+    -  Gabung_Trojan
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 300
+  
+- name: "STREAMING"
+  type: select
+  proxies:
+    -  Gabung_Vmess
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 300
+  
+- name: "VIDIO"
+  type: select
+  proxies:
+    -  Vidio_Vmess
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 300
+  
+- name: "GAME"
+  type: select
+  proxies:
+    -  Game
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 300
+  
+- name: "BOKEP"
+  type: select
+  proxies:
+    -  Gabung_Vmess
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 300
+  
+- name: "ZEROTIER"
+  type: select
+  proxies:
+    -  Semua_PingMantul
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 300
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",BaLiTa
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679333646/ei/rkQYZID4EoGp8QPMqJ3YCA/ip/45.12.80.220/id/puljdsvT4uo.1/itag/93/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D134/hls_chunk_host/rr2---sn-npoe7nsk.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/228750/mh/mN/mm/44/mn/sn-npoe7nsk/ms/lva/mv/m/mvi/2/pl/26/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679311966/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRAIgQ_4pg2PSOz4KKS9Nsqk0x3yJUyzwciHmA7Xcthp0cFkCIHU8rDLVpX7TAgch6p_6WtVi3qFWv8k6WwDcIpRJanLC/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRQIhAJz9S6qAkGqH336OJZ8Ld1ofmnnObpYEgQKORdWuYS9KAiAfl-owt6oO9xdWotcwVHkvY89OQNKsyDt3B_Yd0g-T6g%3D%3D/playlist/index.m3u8
+proxy-providers:
+  TrojanMaster:
+    type: file
+    path: ./TrojanMaster.yaml
+    health-check:
+      enable: true
+      interval: 300
+      lazy: true
+      url: 'http://www.gstatic.com/generate_204'
+      
+  VmessMaster:
+    type: file
+    path: ./VmessMaster.yaml
+    health-check:
+      enable: true
+      interval: 300
+      lazy: true
+      url: 'http://www.gstatic.com/generate_204'
+      
+  VmessVidio:
+    type: file
+    path: ./VmessVidio.yaml
+    health-check:
+      enable: true
+      interval: 300
+      lazy: true
+      url: 'http://www.gstatic.com/generate_204'
+      
+  Game:
+    type: file
+    path: ./Game.yaml
+    health-check:
+      enable: true
+      interval: 300
+      lazy: true
+      url: 'http://www.gstatic.com/generate_204'
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Murottal Al-Quran Anak Ciko 24/7
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679332471/ei/F0AYZMiXMOzAvcAP5-mkoAs/ip/45.12.80.220/id/MGtUqBAlIXU.1/itag/93/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D134/hls_chunk_host/rr3---sn-npoe7nez.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/156250/mh/wa/mm/44/mn/sn-npoe7nez/ms/lva/mv/m/mvi/3/pl/26/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679310537/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRQIhAIjZ-iCGuC-JVDsMPDJdoIcLaaqwy-guB2FgOsccTciqAiAuvJ1C_agae5cxA8OKe0_098DWv5GqmVYZCq2aYDZOyw%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRQIgX4JCv_WJYkPjhRqhNfXTcUWw1P8yPxqHqBuEES6s3W4CIQDXnAdnf026rHQe3qpdJJIf2C3_Mu0cbJueZV4Rv0zDzw%3D%3D/playlist/index.m3u8
+  ShadowsocksMaster:
+    type: file
+    path: ./ShadowsocksMaster.yaml
+    health-check:
+      enable: true
+      interval: 300
+      lazy: true
+      url: 'http://www.gstatic.com/generate_204'
+      
+  SnellMaster:
+    type: file
+    path: ./SnellMaster.yaml
+    health-check:
+      enable: true
+      interval: 300
+      lazy: true
+      url: 'http://www.gstatic.com/generate_204'
+      
+rule-providers:
+  LAN:
+    behavior: ipcidr
+    type: file
+    path: ./LAN.yaml
+    
+  Sosmed:
+    behavior: classical
+    type: file
+    path: ./sosmed.yaml
+    
+  Streaming:
+    behavior: classical
+    type: file
+    path: ./streaming.yaml
+    
+  Vidio:
+    behavior: classical
+    type: file
+    path: ./vidio.yaml
+    
+  Game:
+    behavior: classical
+    type: file
+    path: ./gaming.yaml
+    
+  Bokep:
+    behavior: classical
+    type: file
+    path: ./bokep.yaml
+    
+  Zerotier:
+    behavior: classical
+    type: file
+    path: ./zerotier.yaml
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Blippi
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679331576/ei/mDwYZKnTHvqv3LUPm52YyAQ/ip/45.12.80.220/id/_RfbGVO5q4k.1/itag/93/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D134/hls_chunk_host/rr3---sn-npoldn7e.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/148750/mh/Xd/mm/44/mn/sn-npoldn7e/ms/lva/mv/m/mvi/3/pl/26/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679309802/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRgIhAOZVMfKCUjMn8BBPXYtElkDDPEE1UrB0XWsZLuOPgDtBAiEAqmtlwryGd5BXYqgcHX9Gs8jTw9zq-LZqvG7XJyA7i1Q%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgV9CeGFkck_dmQO_kSc_lLWwhzr1dJ3zT1NrdNUQJko4CIE-fJgZMv_88gcCBvzgzrY4XfaIRKOJJhkeQ32Uy9EV9/playlist/index.m3u8
+rules:
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Oddbods Live
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679328461/ei/bTAYZKDAL8S-juMPpsSZmAw/ip/45.12.80.220/id/WeeuskOm1bw.1/itag/92/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D139/sgovp/gir%3Dyes%3Bitag%3D133/hls_chunk_host/rr5---sn-npoe7nsr.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/158750/mh/nt/mm/44/mn/sn-npoe7nsr/ms/lva/mv/m/mvi/5/pl/26/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679306441/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRgIhAPkpYOV50HlNX6ztkIa2T80BHlOoyU3j2AQLwf-5AxbTAiEA31hU8uRvrJCU_SCYBICO5eYAPW5YRw2Zr63wzJ_WwjY%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRQIgN4ky1PqfXfCoVw2O6bOgCKqrc69B3c-okEIVPYIG6y4CIQCgjPMYrkTOUaYymkKzlHY3N0aIf7El_D29nSyVEEM1HQ%3D%3D/playlist/index.m3u8
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  
+    # Instagram-Whatsapp
+  - DOMAIN-SUFFIX,cdninstagram.com,SOSMED
+  - DOMAIN-SUFFIX,instagram.com,SOSMED
+  - DOMAIN-SUFFIX,cdninstagram.com,SOSMED
+  - DOMAIN-SUFFIX,instagram.com,SOSMED
+  - DOMAIN-SUFFIX,m.me,SOSMED
+  - DOMAIN-SUFFIX,oculus.com,SOSMED
+  - DOMAIN-SUFFIX,oculuscdn.com,SOSMED
+  - DOMAIN-SUFFIX,rocksdb.org,SOSMED
+  - DOMAIN-SUFFIX,whatsapp.com,SOSMED
+  - DOMAIN-SUFFIX,whatsapp.net,SOSMED
+  - DOMAIN-SUFFIX,m.me,SOSMED
+  - DOMAIN-SUFFIX,oculus.com,SOSMED
+  - DOMAIN-SUFFIX,oculuscdn.com,SOSMED
+  - DOMAIN-SUFFIX,rocksdb.org,SOSMED
+  - DOMAIN-SUFFIX,whatsapp.com,SOSMED
+  - DOMAIN-SUFFIX,whatsapp.net,SOSMED
+  - DST-PORT,3478,SOSMED
+  - DST-PORT,4244,SOSMED
+  - DST-PORT,5222,SOSMED
+  - DST-PORT,5223,SOSMED
+  - DST-PORT,5228,SOSMED
+  - DST-PORT,5288,SOSMED
+  - DST-PORT,5242,SOSMED
+  - DST-PORT,5349,SOSMED
+  - DST-PORT,34784,SOSMED
+  - DST-PORT,45395,SOSMED
+  - DST-PORT,50318,SOSMED
+  - DST-PORT,59234,SOSMED
+  # Facebook
+  - DOMAIN-SUFFIX,messenger.com,SOSMED
+  - DOMAIN-SUFFIX,facebook.com,SOSMED
+  - DOMAIN-SUFFIX,facebook.net,SOSMED
+  - DOMAIN-SUFFIX,fb.com,SOSMED
+  - DOMAIN-SUFFIX,fb.me,SOSMED
+  - DOMAIN-SUFFIX,fbaddins.com,SOSMED
+  - DOMAIN-SUFFIX,fbcdn.net,SOSMED
+  - DOMAIN-SUFFIX,fbsbx.com,SOSMED
+  - DOMAIN-SUFFIX,fbworkmail.com,SOSMED
+  - DOMAIN-KEYWORD,.facebook.,SOSMED
+  - DOMAIN-SUFFIX,facebookmail.com,SOSMED
+  - IP-CIDR,103.4.96.0/22,SOSMED
+  - IP-CIDR,129.134.0.0/17,SOSMED
+  - IP-CIDR,157.240.0.0/17,SOSMED
+  - IP-CIDR,173.252.64.0/19,SOSMED
+  - IP-CIDR,173.252.96.0/19,SOSMED
+  - IP-CIDR,179.60.192.0/22,SOSMED
+  - IP-CIDR,185.60.216.0/22,SOSMED
+  - IP-CIDR,204.15.20.0/22,SOSMED
+  - IP-CIDR,31.13.24.0/21,SOSMED
+  - IP-CIDR,31.13.64.0/18,SOSMED
+  - IP-CIDR,45.64.40.0/22,SOSMED
+  - IP-CIDR,66.220.144.0/20,SOSMED
+  - IP-CIDR,69.171.224.0/19,SOSMED
+  - IP-CIDR,69.63.176.0/20,SOSMED
+  - IP-CIDR,74.119.76.0/22,SOSMED
+  # Line
+  - DOMAIN-SUFFIX,lin.ee,SOSMED
+  - DOMAIN-SUFFIX,line.me,SOSMED
+  - DOMAIN-SUFFIX,line.naver.jp,SOSMED
+  - DOMAIN-SUFFIX,line-apps.com,SOSMED
+  - DOMAIN-SUFFIX,line-cdn.net,SOSMED
+  - DOMAIN-SUFFIX,line-scdn.net,SOSMED
+  - DOMAIN-SUFFIX,nhncorp.jp,SOSMED
+  - DOMAIN-SUFFIX,line.me,SOSMED
+  - DOMAIN-SUFFIX,line-apps.com,SOSMED
+  - DOMAIN-SUFFIX,line-scdn.net,SOSMED
+  - DOMAIN-SUFFIX,naver.jp,SOSMED
+  - IP-CIDR,103.2.28.0/22,SOSMED
+  - IP-CIDR,119.235.224.0/21,SOSMED
+  - IP-CIDR,119.235.232.0/23,SOSMED
+  - IP-CIDR,119.235.235.0/24,SOSMED
+  - IP-CIDR,119.235.236.0/23,SOSMED
+  - IP-CIDR,125.6.146.0/24,SOSMED
+  - IP-CIDR,125.6.149.0/24,SOSMED
+  - IP-CIDR,125.6.190.0/24,SOSMED
+  - IP-CIDR,125.209.208.0/20,SOSMED
+  - IP-CIDR,203.104.103.0/24,SOSMED
+  - IP-CIDR,203.104.128.0/20,SOSMED
+  - IP-CIDR,203.174.66.64/26,SOSMED
+  - IP-CIDR,203.174.77.0/24,SOSMED
+  - IP-CIDR,103.2.30.0/23,SOSMED
+  - IP-CIDR,125.209.208.0/20,SOSMED
+  - IP-CIDR,147.92.128.0/17,SOSMED
+  - IP-CIDR,203.104.144.0/21,SOSMED
+  # Telegram
+  - DOMAIN-SUFFIX,telegra.ph,SOSMED
+  - DOMAIN-SUFFIX,telegram.org,SOSMED
+  - DOMAIN-SUFFIX,t.me,SOSMED
+  - DOMAIN-SUFFIX,tdesktop.com,SOSMED
+  - DOMAIN-SUFFIX,telegram.me,SOSMED
+  - DOMAIN-SUFFIX,telesco.pe,SOSMED
+  # Twitter
+  - DOMAIN-SUFFIX,pscp.tv,SOSMED
+  - DOMAIN-SUFFIX,periscope.tv,SOSMED
+  - DOMAIN-SUFFIX,t.co,SOSMED
+  - DOMAIN-SUFFIX,twimg.co,SOSMED
+  - DOMAIN-SUFFIX,twimg.com,SOSMED
+  - DOMAIN-SUFFIX,twitpic.com,SOSMED
+  - DOMAIN-SUFFIX,twitter.com,SOSMED
+  - DOMAIN-SUFFIX,vine.co,SOSMED
+  # Instagram-Whatsapp
+  - DOMAIN-SUFFIX,cdninstagram.com,SOSMED
+  - DOMAIN-SUFFIX,instagram.com,SOSMED
+  - DOMAIN-SUFFIX,m.me,SOSMED
+  - DOMAIN-SUFFIX,oculus.com,SOSMED
+  - DOMAIN-SUFFIX,oculuscdn.com,SOSMED
+  - DOMAIN-SUFFIX,rocksdb.org,SOSMED
+  - DOMAIN-SUFFIX,whatsapp.com,SOSMED
+  - DOMAIN-SUFFIX,whatsapp.net,SOSMED
+  # Facebook
+  - DOMAIN-SUFFIX,messenger.com,SOSMED
+  - DOMAIN-SUFFIX,facebook.com,SOSMED
+  - DOMAIN-SUFFIX,facebook.net,SOSMED
+  - DOMAIN-SUFFIX,fb.com,SOSMED
+  - DOMAIN-SUFFIX,fb.me,SOSMED
+  - DOMAIN-SUFFIX,fbaddins.com,SOSMED
+  - DOMAIN-SUFFIX,fbcdn.net,SOSMED
+  - DOMAIN-SUFFIX,fbsbx.com,SOSMED
+  - DOMAIN-SUFFIX,fbworkmail.com,SOSMED
+  - DOMAIN-KEYWORD,.facebook.,SOSMED
+  - DOMAIN-SUFFIX,facebookmail.com,SOSMED
+  # Line
+  - DOMAIN-SUFFIX,lin.ee,SOSMED
+  - DOMAIN-SUFFIX,line.me,SOSMED
+  - DOMAIN-SUFFIX,line.naver.jp,SOSMED
+  - DOMAIN-SUFFIX,line-apps.com,SOSMED
+  - DOMAIN-SUFFIX,line-cdn.net,SOSMED
+  - DOMAIN-SUFFIX,line-scdn.net,SOSMED
+  - DOMAIN-SUFFIX,nhncorp.jp,SOSMED
+  - DOMAIN-SUFFIX,line.me,SOSMED
+  - DOMAIN-SUFFIX,line-apps.com,SOSMED
+  - DOMAIN-SUFFIX,line-scdn.net,SOSMED
+  - DOMAIN-SUFFIX,naver.jp,SOSMED
+  # Telegram
+  - DOMAIN-SUFFIX,telegra.ph,SOSMED
+  - DOMAIN-SUFFIX,telegram.org,SOSMED
+  - DOMAIN-SUFFIX,t.me,SOSMED
+  - DOMAIN-SUFFIX,tdesktop.com,SOSMED
+  - DOMAIN-SUFFIX,telegram.me,SOSMED
+  - DOMAIN-SUFFIX,telesco.pe,SOSMED
+  # Twitter
+  - DOMAIN-SUFFIX,pscp.tv,SOSMED
+  - DOMAIN-SUFFIX,periscope.tv,SOSMED
+  - DOMAIN-SUFFIX,t.co,SOSMED
+  - DOMAIN-SUFFIX,twimg.co,SOSMED
+  - DOMAIN-SUFFIX,twimg.com,SOSMED
+  - DOMAIN-SUFFIX,twitpic.com,SOSMED
+  - DOMAIN-SUFFIX,twitter.com,SOSMED
+  - DOMAIN-SUFFIX,vine.co,SOSMED
+  # whatsapp
+  - DOMAIN-SUFFIX,web.whatsapp.com,SOSMED
+  - DOMAIN-SUFFIX,www.whatsapp.com,SOSMED
+  - DOMAIN-SUFFIX,api.whatsapp.com,SOSMED
+  - DOMAIN-SUFFIX,v.whatsapp.net,SOSMED
+  - DOMAIN-SUFFIX,whatsapp.com,SOSMED
+  - DOMAIN-SUFFIX,whatsapp.net,SOSMED
+  - DOMAIN-SUFFIX,wa.me,SOSMED
+  # youtube
+  - DOMAIN-SUFFIX,youtube.com,STREAMING
+  - DOMAIN-SUFFIX,googlevideo.com,STREAMING
+  - DOMAIN-SUFFIX,gvt2.com,STREAMING
+  - DOMAIN-SUFFIX,ytimg.com,STREAMING
+  - DOMAIN-KEYWORD,youtube,STREAMING
+  - DOMAIN-SUFFIX,yt3.ggpht.com,STREAMING
+  - DOMAIN-SUFFIX,youtube.is,STREAMING
+  - DOMAIN-SUFFIX,youtube.it,STREAMING
+  - DOMAIN-SUFFIX,youtube.jo,STREAMING
+  - DOMAIN-SUFFIX,youtube.jp,STREAMING
+  - DOMAIN-SUFFIX,youtube.kr,STREAMING
+  - DOMAIN-SUFFIX,youtube.kz,STREAMING
+  - DOMAIN-SUFFIX,youtube.la,STREAMING
+  - DOMAIN-SUFFIX,youtube.lk,STREAMING
+  - DOMAIN-SUFFIX,youtube.lt,STREAMING
+  - DOMAIN-SUFFIX,youtube.lu,STREAMING
+  - DOMAIN-SUFFIX,youtube.lv,STREAMING
+  - DOMAIN-SUFFIX,youtube.ly,STREAMING
+  - DOMAIN-SUFFIX,youtube.ma,STREAMING
+  - DOMAIN-SUFFIX,youtube.md,STREAMING
+  - DOMAIN-SUFFIX,youtube.me,STREAMING
+  - DOMAIN-SUFFIX,youtube.mk,STREAMING
+  - DOMAIN-SUFFIX,youtube.mn,STREAMING
+  - DOMAIN-SUFFIX,youtube.mx,STREAMING
+  - DOMAIN-SUFFIX,youtube.my,STREAMING
+  - DOMAIN-SUFFIX,youtube.ng,STREAMING
+  - DOMAIN-SUFFIX,youtube.ni,STREAMING
+  - DOMAIN-SUFFIX,youtube.nl,STREAMING
+  - DOMAIN-SUFFIX,youtube.no,STREAMING
+  - DOMAIN-SUFFIX,youtube.pa,STREAMING
+  - DOMAIN-SUFFIX,youtube.pe,STREAMING
+  - DOMAIN-SUFFIX,youtube.ph,STREAMING
+  - DOMAIN-SUFFIX,youtube.pk,STREAMING
+  - DOMAIN-SUFFIX,youtube.pl,STREAMING
+  - DOMAIN-SUFFIX,youtube.pr,STREAMING
+  - DOMAIN-SUFFIX,youtube.pt,STREAMING
+  - DOMAIN-SUFFIX,youtube.qa,STREAMING
+  - DOMAIN-SUFFIX,youtube.ro,STREAMING
+  - DOMAIN-SUFFIX,youtube.rs,STREAMING
+  - DOMAIN-SUFFIX,youtube.ru,STREAMING
+  - DOMAIN-SUFFIX,youtube.sa,STREAMING
+  - DOMAIN-SUFFIX,youtube.se,STREAMING
+  - DOMAIN-SUFFIX,youtube.sg,STREAMING
+  - DOMAIN-SUFFIX,youtube.si,STREAMING
+  - DOMAIN-SUFFIX,youtube.sk,STREAMING
+  - DOMAIN-SUFFIX,youtube.sn,STREAMING
+  - DOMAIN-SUFFIX,youtube.soy,STREAMING
+  - DOMAIN-SUFFIX,youtube.sv,STREAMING
+  - DOMAIN-SUFFIX,youtube.tn,STREAMING
+  - DOMAIN-SUFFIX,youtube.tv,STREAMING
+  - DOMAIN-SUFFIX,youtube.ua,STREAMING
+  - DOMAIN-SUFFIX,youtube.ug,STREAMING
+  - DOMAIN-SUFFIX,youtube.uy,STREAMING
+  - DOMAIN-SUFFIX,youtube.vn,STREAMING
+  - DOMAIN-SUFFIX,youtubeeducation.com,STREAMING
+  - DOMAIN-SUFFIX,youtubefanfest.com,STREAMING
+  - DOMAIN-SUFFIX,youtubegaming.com,STREAMING
+  - DOMAIN-SUFFIX,youtubego.co.id,STREAMING
+  - DOMAIN-SUFFIX,youtubego.co.in,STREAMING
+  - DOMAIN-SUFFIX,youtubego.com,STREAMING
+  - DOMAIN-SUFFIX,youtubego.com.br,STREAMING
+  - DOMAIN-SUFFIX,youtubego.id,STREAMING
+  - DOMAIN-SUFFIX,youtubego.in,STREAMING
+  - DOMAIN-SUFFIX,youtubei.googleapis.com,STREAMING
+  - DOMAIN-SUFFIX,youtubekids.com,STREAMING
+  - DOMAIN-SUFFIX,youtubemobilesupport.com,STREAMING
+  - DOMAIN-SUFFIX,yt.be,STREAMING
+  - DOMAIN-SUFFIX,ytimg.com,STREAMING
+  # tiktok
+  - DOMAIN-SUFFIX,byteoversea.com,STREAMING
+  - DOMAIN-SUFFIX,ibytedtos.com,STREAMING
+  - DOMAIN-SUFFIX,muscdn.com,STREAMING
+  - DOMAIN-SUFFIX,musical.ly,STREAMING
+  - DOMAIN-SUFFIX,tiktok.com,STREAMING
+  - DOMAIN-SUFFIX,tik-tokapi.com,STREAMING
+  - DOMAIN-SUFFIX,tiktokcdn.com,STREAMING
+  - DOMAIN-SUFFIX,tiktokv.com,STREAMING
+  - DOMAIN-KEYWORD,-tiktokcdn-com,STREAMING
+  # Game
+  - DOMAIN-SUFFIX,garena.com,GAME
+  - DOMAIN-SUFFIX,pubgmobile.com,GAME
+  # Zerotier
+  - DOMAIN,my.zerotier.com,ZEROTIER
+  - DOMAIN-SUFFIX,zerotier.com,ZEROTIER
+  - DST-PORT,9993,GAME
+  - IP-CIDR,84.17.53.155/23,ZEROTIER
+  - IP-CIDR,103.195.103.66/23,ZEROTIER
+  - IP-CIDR,50.7.252.138/23,ZEROTIER
+  - IP-CIDR,104.194.8.134/23,ZEROTIER
+  - DOMAIN-SUFFIX,zerotier.com,ZEROTIER
+  # FreeFire
+  - DOMAIN-KEYWORD,freefire,GAME
+  - DOMAIN-SUFFIX,garena.com,GAME
+  - DOMAIN-SUFFIX,avatargarenanow-a.akamaihd.net,GAME
+  - DOMAIN-SUFFIX,cdngarenanow-a.akamaihd.net,GAME
+  - DOMAIN-SUFFIX,dlmobilegarena-a.akamaihd.net,GAME
+  - DOMAIN-SUFFIX,garena.co.id,GAME
+  - DOMAIN-SUFFIX,garena.co.th,GAME
+  - DOMAIN-SUFFIX,garena.live,GAME
+  - DOMAIN-SUFFIX,garena.my,GAME
+  - DOMAIN-SUFFIX,garena.ph,GAME
+  - DOMAIN-SUFFIX,garena.sg,GAME
+  - DOMAIN-SUFFIX,garena.tv,GAME
+  - DOMAIN-SUFFIX,garena.tw,GAME
+  - DOMAIN-SUFFIX,garena.vn,GAME
+  - DOMAIN-SUFFIX,garenanow.com,GAME
+  - DOMAIN-SUFFIX,seagroup.com,GAME
+  # PUBG
+  - DOMAIN-SUFFIX,pubgmobile.com,GAME
+  - DOMAIN-SUFFIX,igamecj.com,GAME
+  - DOMAIN,file-igamecj.akamaized.net,GAME
+  - IP-CIDR,45.40.220.0/22,GAME
+  - IP-CIDR,150.109.124.0/23,GAME
+  - IP-CIDR,49.51.228.0/23,GAME
+  - IP-CIDR,170.106.102.0/24,GAME
+  # Hotstar
+  - IP-CIDR,192.168.1.1/24,STREAMING
+  # tv
+  - DOMAIN-SUFFIX,av-live-cdn.mncnow.id,STREAMING
+  - DOMAIN-SUFFIX,bangjaxtv.blogspot.com,STREAMING
+  # Disney+
+  - DOMAIN-KEYWORD,hotstar,STREAMING
+  - DOMAIN-SUFFIX,hotstar.com,STREAMING
+  - DOMAIN-SUFFIX,expressplay.com,STREAMING
+  - DOMAIN-SUFFIX,measurement.com,STREAMING
+  - DOMAIN-SUFFIX,bamgrid.com,STREAMING
+  - DOMAIN-SUFFIX,disneyplus.com,STREAMING
+  - DOMAIN-SUFFIX,disney-plus.net,STREAMING
+  - DOMAIN-SUFFIX,disneystreaming.com,STREAMING
+  - DOMAIN-SUFFIX,dssott.com,STREAMING
+  - DOMAIN,cdn.registerdisney.go.com,STREAMING
+  # Vidio
+  - DOMAIN-SUFFIX,thumbor.prod.vid.id,VIDIO
+  - DOMAIN-SUFFIX,static-playback.prod.vid.id,VIDIO
+  - DOMAIN-SUFFIX,vid.id,VIDIO
+  - DOMAIN-SUFFIX,static-playback-vidio-com.akamaized.net,VIDIO
+  - DOMAIN-SUFFIX,plenty.vidio.com,VIDIO
+  - DOMAIN-SUFFIX,vidio.com,VIDIO
+  - DOMAIN-SUFFIX,www.vidio.com,VIDIO
+  - DOMAIN-SUFFIX,api.vidio.com,VIDIO
+  - DOMAIN-SUFFIX,api-ns.vidio.com,VIDIO
+  - DOMAIN-SUFFIX,media-vidio-com.akamaized.net,VIDIO
+  - DOMAIN-SUFFIX,static-web-prod-vidio.akamaized.net,VIDIO
+  - DOMAIN-SUFFIX,geo-id-media-vidio-com.akamaized.net,VIDIO
+  - DOMAIN-SUFFIX,hermes.vidio.com,VIDIO
+  - DOMAIN-SUFFIX,token-media-vidio-com.akamaized.net,VIDIO
+  - DOMAIN-SUFFIX,etslive-2-vidio-com.akamaized.net,VIDIO
+  - DOMAIN-SUFFIX,live-production.secureswiftcontent.com,VIDIO
+  - DOMAIN-SUFFIX,secureswiftcontent.com,VIDIO
+  - DOMAIN-SUFFIX,vidiocdn.com,VIDIO
+  - DOMAIN-KEYWORD,vidio,VIDIO
+  # bstation
+  - DOMAIN-SUFFIX,m.bstation.com,VIDIO
+  - DOMAIN-SUFFIX,bevent.bilibili.tv,VIDIO
+  - DOMAIN-SUFFIX,bmeta.bilibili.tv,VIDIO
+  - DOMAIN-SUFFIX,bkol.bilibili.tv,VIDIO
+  - DOMAIN-SUFFIX,bogv.bilibili.tv,VIDIO
+  - DOMAIN-SUFFIX,bsns.bilibili.tv,VIDIO
+  - DOMAIN-SUFFIX,bugc.bilibili.tv,VIDIO
+  - DOMAIN-SUFFIX,test456.bilibili.tv,VIDIO
+  - DOMAIN-SUFFIX,www.bilibili.tv,VIDIO
+  - DOMAIN-SUFFIX,www.bstation.com,VIDIO
+  - DOMAIN-SUFFIX,bstation.com,VIDIO
+  - DOMAIN-SUFFIX,bilivideo.com,VIDIO
+  - DOMAIN-SUFFIX,xlaxiata2.md-apis.medallia.com,VIDIO
+  # bokep
+  - DOMAIN-SUFFIX,phncdn.com,BOKEP
+  - DOMAIN-SUFFIX,phprcdn.com,BOKEP
+  - DOMAIN-SUFFIX,porngub.com,BOKEP
+  - DOMAIN-SUFFIX,pornhub-deutsch.net,BOKEP
+  - DOMAIN-SUFFIX,pornhubapparel.com,BOKEP
+  - DOMAIN-SUFFIX,pornhub.com,BOKEP
+  - DOMAIN-SUFFIX,pornhub.org,BOKEP
+  - DOMAIN-SUFFIX,pornhubpremium.com,BOKEP
+  - DOMAIN-SUFFIX,phncdn.com,BOKEP
+  - DOMAIN-SUFFIX,phprcdn.com,BOKEP
+  - DOMAIN-SUFFIX,pornhub.com,BOKEP
+  - DOMAIN-SUFFIX,pornhubpremium.com,BOKEP
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Babybus
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679330578/ei/sTgYZJ23Of2Lg8UP86SA8Ag/ip/45.12.80.220/id/Qp_10QggKZs.1/itag/93/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D134/hls_chunk_host/rr1---sn-npoldn7l.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/153750/mh/G0/mm/44/mn/sn-npoldn7l/ms/lva/mv/m/mvi/1/pl/26/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679308840/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRQIhAJYlvW70oRPxo6YAH95Dgw60JNYIP3hdRqFzh1FqN4kdAiAb4UYOj8ZbcAipGzZXFjHu6KDwxWXK5CSDJs87s1AjMg%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRgIhAJate7KopwHdfY9aIDFGqNVGT3dE8AXnHljrQSoLDbsFAiEA5v735grmCxjE6ez5aPle06sGZ-dxSbTSskbuVGK1j18%3D/playlist/index.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Antiks
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679327644/ei/PC0YZOrcDuqZz7sPpaiWqAk/ip/45.12.80.220/id/SSKT61Lsu-U.1/itag/93/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D134/hls_chunk_host/rr3---sn-npoe7nz7.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/142500/mh/bv/mm/44/mn/sn-npoe7nz7/ms/lva/mv/m/mvi/3/pl/26/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679305968/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRQIhAKbQAu9f_AiDnkrAFkzjX52yybNKYVmYfcOj_OZ0gjDlAiAatOBS4HWANs38XJTGOfwceb2Mayi7fsbYXVwlunn-3A%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgCXyVZmnjQE0EYRZdBu1xMVNLmD1A88hAttYVFQePl-cCICk5Nld23QwUlcQl0yh1PeQow1A89WY6NgUKNOMvppHT/playlist/index.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Live Maher Zain
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679289432/ei/-JcXZIGMKIGKg8UPxsW72Aw/ip/45.12.80.220/id/bSiOshKjGe0.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/rr2---sn-npoldn7z.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/316250/mh/22/mm/44/mn/sn-npoldn7z/ms/lva/mv/m/mvi/2/pl/26/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679267570/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRAIgMrsVKQD6KZF8x9oz3ugMfQ7PEb3ftDzrGUAPn6Mxp7QCICnc9-9vLhvvr37TytJFXIFKUibcOu9A_KnOUbKuqcog/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRQIgSACflaUHgwqG_BIQDy6iXnt81LFJatez9devG28pDeACIQDy10-YFhs4XDngLjNCIioY-ssyYQEhP_wJL5S1QNGN9Q%3D%3D/playlist/index.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Adi Hidayat Official
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679341703/ei/J2QYZM2JMZ2n3LUP2-mF8AQ/ip/103.253.24.212/id/16jKkJrWu-A.1/itag/93/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D134/hls_chunk_host/rr3---sn-i3belnll.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/246250/mh/AH/mip/2001:470:1:be9:0:14:43:b7e6/mm/44/mn/sn-i3belnll/ms/lva/mv/m/mvi/3/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679319648/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRQIhALQWAalmztMiqP7dKi6j79ZNxew4B8Nl5PGxKfTsBcI4AiB7xTJgvJV7SEZdqk2BeoDS8L0uKJwpkSrv_Y9Uj7GRUw%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mip,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRgIhAMFoX0DZn9r3r30BeogLnsFqkleuObHhlHzOvOQ8UsFzAiEAnhThiuT100aLmP5BoSgpbHethG4LcEswnWbRFHUY6rk%3D/playlist/index.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Cocomelon Live
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679341181/ei/HWIYZNKgBfGvmge4wYCICA/ip/103.253.24.212/id/WNOppbVkKu8.2/itag/93/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D134/hls_chunk_host/rr3---sn-npoe7nds.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/82500/mh/M9/mip/2001:470:1:be9:0:14:43:b7e6/mm/44/mn/sn-npoe7nds/ms/lva/mv/m/mvi/3/pl/64/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679319170/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRAIgO2D5M4ecQvnu0QqPO_Fm5TZblOBXxpqxxlmmLOtrDVUCICV1Ir7mKR8v1XnEQE6x4uMLwv_ED_i26SGErTzPxi-j/lsparams/hls_chunk_host,initcwndbps,mh,mip,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRQIhAPJH8lGNJd3v_EMHXC3qVYLnQ2miwJaaVXqmYA9sI-eFAiACTjpe6JwFfUZjpDWg2Ww67ztxV4I23o5y6lHHmS494A%3D%3D/playlist/index.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Liputan6 7/24
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679281936/ei/sHoXZIXKF-GBjuMPz-a1yAc/ip/45.12.80.220/id/y0da6F1FtPk.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/rr5---sn-npoeenee.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/331250/mh/HI/mm/44/mn/sn-npoeenee/ms/lva/mv/m/mvi/5/pl/26/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679259891/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRgIhAJ4A4lOFhRn7p7ztQoWquNJsN2mPGIcDWChGnHoCJhpXAiEA3BEykRL55oC1W2pepS-evPvJ6sMPcxr4BeY9b5YExmk%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRQIhANanD4nqBjbtx3bhoQt0qFTMz8MQkJalYb3NzccShCZzAiBj3qayOfMqE6X3vZqToukcCymOCOJFw5Eh-EVkiFQBpQ%3D%3D/playlist/index.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TkhdCwr/images-4.jpg" group-title="Aztekindo TV",Talking tom
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1679341029/ei/hWEYZILuKoiMjuMPirqH0A0/ip/103.253.24.212/id/qfHSRdJ8wQE.1/itag/91/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D139/sgovp/gir%3Dyes%3Bitag%3D160/hls_chunk_host/rr3---sn-npoeens7.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/225000/mh/DU/mm/44/mn/sn-npoeens7/ms/lva/mv/m/mvi/3/pl/24/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1679318925/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRgIhAPI4syFIWa1zJ65YfOuqpUvYL6Xbj68kFnL-WdEbNEMJAiEA7xpiTvumgvBCW4jLvnlchAfY6_g1zY81nqwaIXu0DY4%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRQIgDR1zv1tiUGROJLfZ89V9xchX2-3ZFzL4j7S3-GmnJ7sCIQDkQy2Eh_xju1x5-CcgR8A4ioJY_Y2DFL-fUEUMD4Jzvg%3D%3D/playlist/index.m3u8
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - GEOIP,CN,DIRECT
+  - DST-PORT,80,DIRECT
+  - SRC-PORT,7777,DIRECT
+  - RULE-SET,LAN,DIRECT,no-resolve
+  - MATCH,FINAL 
